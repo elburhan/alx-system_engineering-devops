@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Display username, user id, and home directory path for each user in /etc/passwd
+
+# Use the IFS variable to set the Internal Field Separator to ":"
+# This allows us to read each field in /etc/passwd separately
+IFS=":"
+
+# Open /etc/passwd for reading
+while read -r username _ userid _ homedir _; do
+  # Display the required information
+  echo "Username: $username"
+  echo "User ID: $userid"
+  echo "Home Directory: $homedir"
+  echo "-----------------------"
+done < "/etc/passwd"
