@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display user information from /etc/passwd using while loop + IFS
+
+while IFS=: read -r username password userid groupid userdesc homedir shell; do
+    echo "The user $username is part of the $groupid gang, lives in $homedir, and rides $shell."
+    echo "USER ID INFO: $userdesc"
+    echo "----------------------"
+done < /etc/passwd
