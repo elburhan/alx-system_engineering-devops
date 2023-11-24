@@ -3,6 +3,3 @@
 
 # Get the PID of the current script
 script_pid=$$
-
-# Display the PID
-echo "The PID of this script is: $script_pid"
